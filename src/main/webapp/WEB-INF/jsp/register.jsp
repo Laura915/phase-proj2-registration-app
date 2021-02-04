@@ -1,5 +1,5 @@
-<%@ page import="java.sql.*"%>
-<%@ page import="javax.sql.*"%> 
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,13 +7,16 @@
 <title>Phase 2 project Registration</title>
 </head>
 <body>
-	<form action="register.jsp" method=post>
+	<form action="/register" method=post>
 		<p>Enter Name</p>
 		 <input type="text" name="name" />
 		 <p>Enter a Username</p>
 		 <input type="text" name="username" />
 		 <p>Create a Password</p>
 		 <input type="text" name="password" />
+		 </br>
+		 <button type="submit">Submit</button>
 	</form>
+	
 </body>
 </html>
