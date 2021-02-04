@@ -13,6 +13,7 @@ public class MainController {
 	@Autowired
 	LoginService Service;
 	
+	//Register User	
 	@RequestMapping(value="/register", method = RequestMethod.GET)
 	public String showRegisterPage(ModelMap model){
 		return "register";
@@ -23,17 +24,20 @@ public class MainController {
 		model.addAttribute("name", user.getName());
 		return "welcome";
 	} 
+	
+	//Login User	
 	@RequestMapping(value="/login", method = RequestMethod.GET)
 	public String showLoginPage(ModelMap model){
 		return "login";
 	}
 	@RequestMapping(value="/login", method = RequestMethod.POST)
     public String loginUser(Model model, @ModelAttribute User user) {
-		if(Service.searchUser(user.getName())) {
+	
+		if(Service.searchUser(user.getUsername())) {
 			model.addAttribute("name", user.getName());
 			return "welcome";
 		}
-	return "incorrect credentials";
+	return null;
 	} 
 }
 
