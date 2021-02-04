@@ -4,20 +4,19 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Phase 2 project Registration</title>
+<title>Login</title>
 </head>
 <body>
-	<p>Register</p>
-	<form action="/register" method=post>
+	<p>Login</p>
+	<form action="/login" method=post>
 		<p>Enter Name</p>
 		<input type="text" name="name" />
-		<p>Enter a Username</p>
+		<p>Enter Username</p>
 		<input type="text" name="username" />
-		<p>Create a Password</p>
+		<p>Enter Password</p>
 		<input type="text" name="password" /> </br>
 		<button type="submit">Submit</button>
 	</form>
-	<a href="/login">Login Here</a>
-
+	<a href="/register">Register Here</a>
 </body>
 </html>

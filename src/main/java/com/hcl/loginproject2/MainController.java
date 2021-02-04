@@ -22,9 +22,19 @@ public class MainController {
 		Service.saveUser(user.getName(), user.getUsername(), user.getPassword());
 		model.addAttribute("name", user.getName());
 		return "welcome";
-		
 	} 
-	
+	@RequestMapping(value="/login", method = RequestMethod.GET)
+	public String showLoginPage(ModelMap model){
+		return "login";
+	}
+	@RequestMapping(value="/login", method = RequestMethod.POST)
+    public String loginUser(Model model, @ModelAttribute User user) {
+		if(Service.searchUser(user.getName())) {
+			model.addAttribute("name", user.getName());
+			return "welcome";
+		}
+	return "incorrect credentials";
+	} 
 }
 
 

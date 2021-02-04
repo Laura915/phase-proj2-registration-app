@@ -25,6 +25,7 @@ public class LoginService {
 			
 			for (User user : users) {
 				if(user.getUsername().toLowerCase().equals(username.toLowerCase())) {
+					
 					return true;
 				}
 			}
